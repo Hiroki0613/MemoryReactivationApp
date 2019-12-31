@@ -13,16 +13,22 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     var actionLabel = UILabel()
     
-    var priorityDataList:[String] = [
-        " 今日の朝ごはんは？",
-        "今日の服は？",
+    //お題の一覧
+    var odaiDataList:[String] = [
+        "今日の天気は",
+        "今日の朝ごはんは？",
         "今日の昼ごはんは？",
         "今日の夜ごはんは？"
     ]
     
     
-    var pickerView = UIPickerView()
-    
+    //お題を表示するUILabel
+    var odaiLabel = UILabel()
+    //答えを表示するUILabel
+    var answerLabel = UILabel()
+    //お題を選択するPicker
+    var odaiPickerView = UIPickerView()
+    //答えを入力するTextField
     var answerTextField = UITextField()
 
     
@@ -32,8 +38,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         // Do any additional setup after loading the view.
         
         // Delegate設定
-        pickerView.delegate = self
-        pickerView.dataSource = self
+        odaiPickerView.delegate = self
+        odaiPickerView.dataSource = self
         answerTextField.delegate = self
         
         
@@ -42,18 +48,28 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         self.view.backgroundColor = UIColor(red: 0.92, green: 1.0, blue: 0.94, alpha: 1.0)
         
         
-        //お題を表すUILabelを入力する
+        //お題を表すUILabelを実装
+        odaiLabel.frame = CGRect(x: 0, y: self.view.frame.height/8, width: self.view.frame.size.width, height: self.view.frame.size.height/8)
+        odaiLabel.textAlignment = .center
+        odaiLabel.font = UIFont(name: "HiraMaruProN-W4", size: 25)
+        self.view.addSubview(odaiLabel)
         
-        //答えを表すUILabelを入力する
+        
+        //答えを表すUILabelを実装
+        answerLabel.frame = CGRect(x: 0, y: self.view.frame.size.height*2/8, width: self.view.frame.size.width, height: self.view.frame.size.height/8)
+        answerLabel.textAlignment = .center
+        answerLabel.font = UIFont(name: "HiraMaruProN-W4", size: 25)
+        self.view.addSubview(answerLabel)
+        
         
         
         // PickerView のサイズと位置
-        pickerView.frame = CGRect(x: 0, y: self.view.frame.size.height/2, width: self.view.frame.width, height:self.view.frame.height/4 )
+        odaiPickerView.frame = CGRect(x: 0, y: self.view.frame.size.height/2, width: self.view.frame.width, height:self.view.frame.height/4 )
         //pickerの背景色は後日修正
-        pickerView.backgroundColor = UIColor(red: 0.69, green: 0.93, blue: 0.9, alpha: 1.0)
+        odaiPickerView.backgroundColor = UIColor(red: 0.69, green: 0.93, blue: 0.9, alpha: 1.0)
 
         //pickerをviewに表示
-        self.view.addSubview(pickerView)
+        self.view.addSubview(odaiPickerView)
         
         
         
@@ -63,6 +79,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         answerTextField.placeholder = "答えを入力してください"
         answerTextField.textAlignment = .center
         answerTextField.font = UIFont(name: "HiraMaruProN-W4", size: 20)
+        answerTextField.backgroundColor = UIColor(red: 0.69, green: 0.93, blue: 0.9, alpha: 1.0)
+
         
         self.view.addSubview(answerTextField)
         
@@ -78,7 +96,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     // UIPickerViewの行数、リストの数
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return priorityDataList.count
+        return odaiDataList.count
     }
     
     // UIPickerViewの最初の表示
@@ -86,7 +104,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
         
-        return priorityDataList[row]
+        return odaiDataList[row]
     }
     
     // UIPickerViewのRowが選択された時の挙動
@@ -94,8 +112,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                     didSelectRow row: Int,
                     inComponent component: Int) {
         
-        print(priorityDataList[row])
-        
+        odaiLabel.text = "お題: \(odaiDataList[row])"
+        //ここにUserDefaultを入力する。rowのNo.だけを入れる
+    
     }
 
     
@@ -103,6 +122,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     //答えを入力するtextFieldの挙動を実装
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         answerTextField.resignFirstResponder()
+        
+            answerLabel.text = "答え： \(answerTextField.text!)"
+
         return true
     }
     
