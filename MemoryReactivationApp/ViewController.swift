@@ -30,7 +30,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     var odaiPickerView = UIPickerView()
     //答えを入力するTextField
     var answerTextField = UITextField()
-
+    
     
     
     override func viewDidLoad() {
@@ -67,7 +67,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         odaiPickerView.frame = CGRect(x: 0, y: self.view.frame.size.height/2, width: self.view.frame.width, height:self.view.frame.height/4 )
         //pickerの背景色は後日修正
         odaiPickerView.backgroundColor = UIColor(red: 0.69, green: 0.93, blue: 0.9, alpha: 1.0)
-
+        
         //pickerをviewに表示
         self.view.addSubview(odaiPickerView)
         
@@ -80,7 +80,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         answerTextField.textAlignment = .center
         answerTextField.font = UIFont(name: "HiraMaruProN-W4", size: 20)
         answerTextField.backgroundColor = UIColor(red: 0.69, green: 0.93, blue: 0.9, alpha: 1.0)
-
+        
         
         self.view.addSubview(answerTextField)
         
@@ -114,7 +114,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         
         odaiLabel.text = "お題: \(odaiDataList[row])"
         //ここにUserDefaultを入力する。rowのNo.だけを入れる
-    
+        
     }
 
     
@@ -123,8 +123,10 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         answerTextField.resignFirstResponder()
         
-            answerLabel.text = "答え： \(answerTextField.text!)"
-
+        answerLabel.text = "答え： \(answerTextField.text!)"
+        
+        //入力した言葉はRealmに記入、配列にする
+        //2週間後に自動的に削除されるようにする
         return true
     }
     

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		F58940C123B8D67100A7B129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58940BF23B8D67100A7B129 /* Main.storyboard */; };
 		F58940C323B8D67800A7B129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58940C223B8D67800A7B129 /* Assets.xcassets */; };
 		F58940C623B8D67800A7B129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58940C423B8D67800A7B129 /* LaunchScreen.storyboard */; };
+		F5ABEE1423BC6FC6006AF2D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ABEE1323BC6FC6006AF2D7 /* Data.swift */; };
+		F5ABEE1623BC71B5006AF2D7 /* MemoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ABEE1523BC71B5006AF2D7 /* MemoryTableViewController.swift */; };
+		F5ABEE1823BC71F9006AF2D7 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ABEE1723BC71F9006AF2D7 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		F58940C223B8D67800A7B129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58940C523B8D67800A7B129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F58940C723B8D67800A7B129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5ABEE1323BC6FC6006AF2D7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		F5ABEE1523BC71B5006AF2D7 /* MemoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTableViewController.swift; sourceTree = "<group>"; };
+		F5ABEE1723BC71F9006AF2D7 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +54,6 @@
 				E995E70E5DB40C569F0C08FD /* Pods-MemoryReactivationApp.debug.xcconfig */,
 				1A9DD930469C3BE489D0A235 /* Pods-MemoryReactivationApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,9 +90,12 @@
 				F58940BB23B8D67100A7B129 /* SceneDelegate.swift */,
 				F58940BD23B8D67100A7B129 /* ViewController.swift */,
 				F58940BF23B8D67100A7B129 /* Main.storyboard */,
+				F5ABEE1723BC71F9006AF2D7 /* QuizViewController.swift */,
+				F5ABEE1523BC71B5006AF2D7 /* MemoryTableViewController.swift */,
 				F58940C223B8D67800A7B129 /* Assets.xcassets */,
 				F58940C423B8D67800A7B129 /* LaunchScreen.storyboard */,
 				F58940C723B8D67800A7B129 /* Info.plist */,
+				F5ABEE1323BC6FC6006AF2D7 /* Data.swift */,
 			);
 			path = MemoryReactivationApp;
 			sourceTree = "<group>";
@@ -207,9 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5ABEE1623BC71B5006AF2D7 /* MemoryTableViewController.swift in Sources */,
 				F58940BE23B8D67100A7B129 /* ViewController.swift in Sources */,
 				F58940BA23B8D67100A7B129 /* AppDelegate.swift in Sources */,
+				F5ABEE1823BC71F9006AF2D7 /* QuizViewController.swift in Sources */,
 				F58940BC23B8D67100A7B129 /* SceneDelegate.swift in Sources */,
+				F5ABEE1423BC6FC6006AF2D7 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
