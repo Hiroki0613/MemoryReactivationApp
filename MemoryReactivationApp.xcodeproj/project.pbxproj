@@ -86,18 +86,42 @@
 		F58940B823B8D67100A7B129 /* MemoryReactivationApp */ = {
 			isa = PBXGroup;
 			children = (
-				F58940B923B8D67100A7B129 /* AppDelegate.swift */,
-				F58940BB23B8D67100A7B129 /* SceneDelegate.swift */,
-				F58940BD23B8D67100A7B129 /* ViewController.swift */,
-				F58940BF23B8D67100A7B129 /* Main.storyboard */,
-				F5ABEE1723BC71F9006AF2D7 /* QuizViewController.swift */,
-				F5ABEE1523BC71B5006AF2D7 /* MemoryTableViewController.swift */,
-				F58940C223B8D67800A7B129 /* Assets.xcassets */,
-				F58940C423B8D67800A7B129 /* LaunchScreen.storyboard */,
+				F5ABEE1B23BC72AA006AF2D7 /* Model */,
+				F5ABEE1A23BC727B006AF2D7 /* View */,
+				F5ABEE1923BC7258006AF2D7 /* Controller */,
 				F58940C723B8D67800A7B129 /* Info.plist */,
-				F5ABEE1323BC6FC6006AF2D7 /* Data.swift */,
 			);
 			path = MemoryReactivationApp;
+			sourceTree = "<group>";
+		};
+		F5ABEE1923BC7258006AF2D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F58940BD23B8D67100A7B129 /* ViewController.swift */,
+				F5ABEE1723BC71F9006AF2D7 /* QuizViewController.swift */,
+				F5ABEE1523BC71B5006AF2D7 /* MemoryTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5ABEE1A23BC727B006AF2D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F58940BF23B8D67100A7B129 /* Main.storyboard */,
+				F58940B923B8D67100A7B129 /* AppDelegate.swift */,
+				F58940BB23B8D67100A7B129 /* SceneDelegate.swift */,
+				F58940C223B8D67800A7B129 /* Assets.xcassets */,
+				F58940C423B8D67800A7B129 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F5ABEE1B23BC72AA006AF2D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5ABEE1323BC6FC6006AF2D7 /* Data.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
