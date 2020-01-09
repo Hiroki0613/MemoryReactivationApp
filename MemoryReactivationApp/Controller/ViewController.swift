@@ -13,13 +13,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     var actionLabel = UILabel()
     
-    //お題の一覧
-    var odaiDataList:[String] = [
-        "今日の天気は",
-        "今日の朝ごはんは？",
-        "今日の昼ごはんは？",
-        "今日の夜ごはんは？"
-    ]
+    //お題を格納するクラス
+    var odaiData = OdaiData()
     
     
     //お題を表示するUILabel
@@ -96,7 +91,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     // UIPickerViewの行数、リストの数
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return odaiDataList.count
+        return odaiData.odaiDataList.count
+            
     }
     
     // UIPickerViewの最初の表示
@@ -104,7 +100,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
         
-        return odaiDataList[row]
+        return odaiData.odaiDataList[row]
     }
     
     // UIPickerViewのRowが選択された時の挙動
@@ -112,7 +108,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                     didSelectRow row: Int,
                     inComponent component: Int) {
         
-        odaiLabel.text = "お題: \(odaiDataList[row])"
+        odaiLabel.text = "お題: \(odaiData.odaiDataList[row])"
         //ここにUserDefaultを入力する。rowのNo.だけを入れる
         
     }

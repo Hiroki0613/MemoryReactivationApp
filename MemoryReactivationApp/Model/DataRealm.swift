@@ -7,7 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
-class DataRealm: NSObject {
-
+// Objectを継承してクラスを作成
+class DataRealm: Object {
+    
+    // 各プロパティは@objc dynamic varを付けて宣言
+    @objc dynamic var answerDataList = [String]()
+    
+    override class func primaryKey() -> String? {
+        return "answerDataList"
+    }
 }

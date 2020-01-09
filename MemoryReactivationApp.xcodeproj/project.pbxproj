@@ -14,7 +14,7 @@
 		F58940C123B8D67100A7B129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58940BF23B8D67100A7B129 /* Main.storyboard */; };
 		F58940C323B8D67800A7B129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58940C223B8D67800A7B129 /* Assets.xcassets */; };
 		F58940C623B8D67800A7B129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58940C423B8D67800A7B129 /* LaunchScreen.storyboard */; };
-		F5ABEE1423BC6FC6006AF2D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ABEE1323BC6FC6006AF2D7 /* Data.swift */; };
+		F5ABEE1423BC6FC6006AF2D7 /* OdaiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ABEE1323BC6FC6006AF2D7 /* OdaiData.swift */; };
 		F5ABEE1623BC71B5006AF2D7 /* MemoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ABEE1523BC71B5006AF2D7 /* MemoryTableViewController.swift */; };
 		F5ABEE1823BC71F9006AF2D7 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ABEE1723BC71F9006AF2D7 /* QuizViewController.swift */; };
 		F5ABEE1D23BE3510006AF2D7 /* DataRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ABEE1C23BE3510006AF2D7 /* DataRealm.swift */; };
@@ -32,7 +32,7 @@
 		F58940C223B8D67800A7B129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F58940C523B8D67800A7B129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F58940C723B8D67800A7B129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5ABEE1323BC6FC6006AF2D7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		F5ABEE1323BC6FC6006AF2D7 /* OdaiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OdaiData.swift; sourceTree = "<group>"; };
 		F5ABEE1523BC71B5006AF2D7 /* MemoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTableViewController.swift; sourceTree = "<group>"; };
 		F5ABEE1723BC71F9006AF2D7 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		F5ABEE1C23BE3510006AF2D7 /* DataRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRealm.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		F5ABEE1B23BC72AA006AF2D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F5ABEE1323BC6FC6006AF2D7 /* Data.swift */,
+				F5ABEE1323BC6FC6006AF2D7 /* OdaiData.swift */,
 				F5ABEE1C23BE3510006AF2D7 /* DataRealm.swift */,
 			);
 			path = Model;
@@ -248,7 +248,7 @@
 				F5ABEE1823BC71F9006AF2D7 /* QuizViewController.swift in Sources */,
 				F5ABEE1D23BE3510006AF2D7 /* DataRealm.swift in Sources */,
 				F58940BC23B8D67100A7B129 /* SceneDelegate.swift in Sources */,
-				F5ABEE1423BC6FC6006AF2D7 /* Data.swift in Sources */,
+				F5ABEE1423BC6FC6006AF2D7 /* OdaiData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
