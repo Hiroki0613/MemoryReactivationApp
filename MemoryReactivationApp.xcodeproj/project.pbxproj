@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F30F0AB23F199F000ACADB6 /* LocalAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F30F0AA23F199F000ACADB6 /* LocalAlert.swift */; };
 		A665E9293417ECBD183117E1 /* Pods_MemoryReactivationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5AE0A47F6EAC3560F423A /* Pods_MemoryReactivationApp.framework */; };
 		F58940BA23B8D67100A7B129 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58940B923B8D67100A7B129 /* AppDelegate.swift */; };
 		F58940BC23B8D67100A7B129 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58940BB23B8D67100A7B129 /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		1A9DD930469C3BE489D0A235 /* Pods-MemoryReactivationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryReactivationApp.release.xcconfig"; path = "Target Support Files/Pods-MemoryReactivationApp/Pods-MemoryReactivationApp.release.xcconfig"; sourceTree = "<group>"; };
+		7F30F0AA23F199F000ACADB6 /* LocalAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAlert.swift; sourceTree = "<group>"; };
 		C9A5AE0A47F6EAC3560F423A /* Pods_MemoryReactivationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryReactivationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E995E70E5DB40C569F0C08FD /* Pods-MemoryReactivationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryReactivationApp.debug.xcconfig"; path = "Target Support Files/Pods-MemoryReactivationApp/Pods-MemoryReactivationApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F58940B623B8D67100A7B129 /* MemoryReactivationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryReactivationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 				F58940BD23B8D67100A7B129 /* ViewController.swift */,
 				F5ABEE1723BC71F9006AF2D7 /* QuizViewController.swift */,
 				F5ABEE1523BC71B5006AF2D7 /* MemoryTableViewController.swift */,
+				7F30F0AA23F199F000ACADB6 /* LocalAlert.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				F5ABEE1823BC71F9006AF2D7 /* QuizViewController.swift in Sources */,
 				F5ABEE1D23BE3510006AF2D7 /* DataRealm.swift in Sources */,
 				F58940BC23B8D67100A7B129 /* SceneDelegate.swift in Sources */,
+				7F30F0AB23F199F000ACADB6 /* LocalAlert.swift in Sources */,
 				F5ABEE1423BC6FC6006AF2D7 /* OdaiData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
