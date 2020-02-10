@@ -17,8 +17,8 @@ class LocalAlert {
         var notificationTime = DateComponents()
         
         //通知の時間設定
-        notificationTime.hour = 12
-        notificationTime.minute = 0
+        notificationTime.hour = 23
+        notificationTime.minute = 28
         let trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: true)
         
         
