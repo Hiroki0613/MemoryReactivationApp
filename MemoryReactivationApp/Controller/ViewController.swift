@@ -111,6 +111,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         odaiLabel.text = "お題: \(odaiData.odaiDataList[row])"
         //ここにUserDefaultを入力する。rowのNo.だけを入れる
         
+        
     }
 
     
