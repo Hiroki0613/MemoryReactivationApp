@@ -10,7 +10,7 @@
 //後日、Realmに変更予定
 import Foundation
 
-class OdaiData {
+struct OdaiData {
     
     //お題の一覧
     var odaiDataList:[String] = [
