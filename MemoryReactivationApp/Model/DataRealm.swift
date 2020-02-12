@@ -13,7 +13,7 @@ import RealmSwift
 class DataRealm: Object {
     
     // 各プロパティは@objc dynamic varを付けて宣言
-    @objc dynamic var answerDataList = [String]()
+    var answerDataLists = List<AnswerDataList>()
     
     override class func primaryKey() -> String? {
         return "answerDataList"
