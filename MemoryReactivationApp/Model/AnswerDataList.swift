@@ -14,5 +14,5 @@ class AnswerDataList: Object {
     //お題名
     @objc dynamic var odai: String = ""
     //回答文
-    @objc dynamic var AnswerSentence: String = ""
+    @objc dynamic var answerSentence: String = ""
 }

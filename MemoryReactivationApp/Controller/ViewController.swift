@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
     
@@ -16,6 +17,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     //お題を格納するクラス
     var odaiData = OdaiData()
     
+    //answerDataListsをインスタンス化
+    var answerDataLists = List<AnswerDataList>()
+    
+    
+    let realm = try! Realm()
     
     //お題を表示するUILabel
     var odaiLabel = UILabel()
@@ -109,6 +115,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
                     inComponent component: Int) {
         
         odaiLabel.text = "お題: \(odaiData.odaiDataList[row])"
+        
         //ここにUserDefaultを入力する。rowのNo.だけを入れる
         
         
@@ -117,12 +124,21 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     
     //答えを入力するtextFieldの挙動を実装
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField, odai: String, answer: String) -> Bool {
         answerTextField.resignFirstResponder()
         
         answerLabel.text = "答え： \(answerTextField.text!)"
         
         //入力した言葉はRealmに記入、配列にする
+        var answerDataList = AnswerDataList()
+//        answerDataList.odai = odai
+//        guard let answerTextField = answerTextField else { }
+//        answerDataList.answerSentence = answerTextField.text
+//        
+//        answerDataLists
+
+        
+        
         //2週間後に自動的に削除されるようにする
         return true
     }
